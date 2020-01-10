@@ -1,0 +1,14 @@
+name: TestCheck
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: sample
+        run: |
+          echo 'sss'
