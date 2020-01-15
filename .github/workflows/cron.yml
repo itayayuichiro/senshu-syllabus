@@ -1,4 +1,4 @@
-name: TestCheck
+name: TestCheck!
 
 on: [push]
 
