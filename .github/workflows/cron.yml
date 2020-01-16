@@ -10,12 +10,12 @@ jobs:
       - name: sample
         run: |
           fejogeoge
-    steps:
-    - name: sample
-      if: failure()
-      run: |
-        echo 'error'
-      if: success()
-      run: |
-        echo 'success'
+
+      - name: index
+        if: failure()
+        run: |
+          echo 'error'
+        if: success()
+        run: |
+          echo 'success'
         
