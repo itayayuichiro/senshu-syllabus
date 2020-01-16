@@ -11,10 +11,12 @@ jobs:
         run: |
           fejogeoge
 
-      - name: index
+      - name: error-step
         if: failure()
         run: |
           echo 'error'
+
+      - name: success-step
         if: success()
         run: |
           echo 'success'
