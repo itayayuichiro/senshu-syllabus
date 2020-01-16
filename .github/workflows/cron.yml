@@ -16,8 +16,15 @@ jobs:
         run: |
           echo 'error'
 
-      - name: success-step
+      - name: Notice Slack Success
         if: success()
         run: |
-          echo 'success'
-        
+          curl -XPOST -d 'token=${{ secrets.SLACK_TOKEN }}' -d 'channel=${{ secrets.SLACK_CHANNEL }}' \
+          -d text="テスト成功" \
+          -d attachments='[
+            {
+              "text": "メッセージ",
+              "color": "#00FF00"
+            }
+          ]' \
+          'https://slack.com/api/chat.postMessage'
