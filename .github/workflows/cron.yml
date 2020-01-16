@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: sample
         run: |
-          fejogeoge
+          echo 'a'
 
       - name: error-step
         if: failure()
